@@ -1,0 +1,13 @@
+require("chenna.plugins-setup")
+require("chenna.core.options")
+require("chenna.core.keymaps")
+require("chenna.core.colorscheme")
+require("chenna.plugins.comment")
+require("chenna.plugins.nvim-tree")
+require("chenna.plugins.lualine")
+require("chenna.plugins.telescope")
+require("chenna.plugins.nvim-cmp")
+require("chenna.plugins.lsp.mason")
+require("chenna.plugins.lsp.lspsaga") 
+require("chenna.plugins.lsp.lspconfig")
+
