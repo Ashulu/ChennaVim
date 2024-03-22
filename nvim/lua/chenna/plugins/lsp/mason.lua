@@ -13,7 +13,6 @@ mason.setup()
 mason_lspconfig.setup({
   ensure_installed = {
     "clangd",
-    "pyright",
     "jdtls",
     "texlab",
     "lua_ls",
