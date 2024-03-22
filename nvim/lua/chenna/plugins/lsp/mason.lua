@@ -15,7 +15,7 @@ mason_lspconfig.setup({
     "clangd",
     "jdtls",
     "texlab",
-    "sumneko_lua",
+    "lua_ls",
   },
 
   automatic_installation = true,
