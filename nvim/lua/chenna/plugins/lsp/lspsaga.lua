@@ -4,16 +4,12 @@ if not saga_status then
   return
 end
 
-saga.setup({
-  -- keybinds for navigation in lspsaga window
-  scroll_preview = { scroll_down = "<C-f>", scroll_up = "<C-b>" },
-  -- use enter to open file with definition preview
-  definition = {
-    edit = "<CR>",
+saga.init_lsp_saga({
+  move_in_sage = { prev = "<C-k>", next = "<C-j>" },
+  finder_action_keys = {
+    open = "<CR>",
   },
-  ui = {
-    colors = {
-      normal_bg = "#022746",
-    },
+  definition_action_keys = {
+    edit = "<CR>";
   },
 })
