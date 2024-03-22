@@ -77,6 +77,9 @@ return packer.startup(function(use)
   use({"glepnir/lspsaga.nvim", branch = "main"})
   use("onsails/lspkind.nvim")
 
+  -- pretty diagnostics
+  use("folke/trouble.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end
