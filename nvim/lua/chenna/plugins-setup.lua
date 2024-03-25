@@ -80,6 +80,16 @@ return packer.startup(function(use)
   -- pretty diagnostics
   use("folke/trouble.nvim")
 
+  -- formatting/linting
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+  })
+  use("jayp0521/mason-null-ls.nvim")
+
   if packer_bootstrap then
     require("packer").sync()
   end

@@ -8,6 +8,5 @@ require("chenna.plugins.lualine")
 require("chenna.plugins.telescope")
 require("chenna.plugins.nvim-cmp")
 require("chenna.plugins.lsp.mason")
-require("chenna.plugins.lsp.lspsaga") 
 require("chenna.plugins.lsp.lspconfig")
-
+require("chenna.plugins.lsp.null-ls")
