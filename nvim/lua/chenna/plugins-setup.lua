@@ -81,14 +81,22 @@ return packer.startup(function(use)
   use("folke/trouble.nvim")
 
   -- formatting/linting
-  use({
+  --[[use({
     "jose-elias-alvarez/null-ls.nvim",
     config = function()
         require("null-ls").setup()
     end,
     requires = { "nvim-lua/plenary.nvim" },
-  })
+  })--]]
   use("jayp0521/mason-null-ls.nvim")
+
+  use {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+        require("nvim-autopairs").setup {}
+    end
+  }
 
   if packer_bootstrap then
     require("packer").sync()

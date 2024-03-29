@@ -24,7 +24,7 @@ mason_lspconfig.setup({
     "pyright",
   },
 
-  automatic_installation = true
+  automatic_installation = true,
 })
 
 mason_null_ls.setup({
@@ -35,4 +35,4 @@ mason_null_ls.setup({
     "pylint",
     "clang_check"
   }
-})
+}) 
