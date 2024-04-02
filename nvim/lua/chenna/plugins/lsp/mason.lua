@@ -4,7 +4,7 @@ if not mason_status then
 end
 
 local mason_lspconfig_status, mason_lspconfig = pcall(require, "mason-lspconfig")
-if not mason_lspconfig_status then 
+if not mason_lspconfig_status then
   return
 end
 
@@ -20,8 +20,9 @@ mason_lspconfig.setup({
     "clangd",
     "jdtls",
     "texlab",
-    "lua_ls",
     "pyright",
+    "lua_ls",
+    "matlab_ls"
   },
 
   automatic_installation = true,
@@ -33,6 +34,9 @@ mason_null_ls.setup({
     "isort",
     "black",
     "pylint",
-    "clang_check"
-  }
-}) 
+    "clang_check",
+    "mlint",
+  },
+
+  automatic_installation = true;
+})

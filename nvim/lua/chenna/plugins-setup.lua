@@ -61,7 +61,7 @@ return packer.startup(function(use)
   use("hrsh7th/nvim-cmp") -- completion plugin
   use("hrsh7th/cmp-buffer") -- source for text in buffer
   use("hrsh7th/cmp-path") -- source for file system paths
-  
+
   -- snippets
   use("L3MON4D3/LuaSnip") -- snippet engine
   use("saadparwaiz1/cmp_luasnip") -- for autocompletion
@@ -78,25 +78,30 @@ return packer.startup(function(use)
   use("onsails/lspkind.nvim")
 
   -- pretty diagnostics
-  use("folke/trouble.nvim")
+  -- use("folke/trouble.nvim")
 
   -- formatting/linting
-  --[[use({
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-        require("null-ls").setup()
-    end,
-    requires = { "nvim-lua/plenary.nvim" },
-  })--]]
+  use("jose-elias-alvarez/null-ls.nvim")
   use("jayp0521/mason-null-ls.nvim")
 
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     config = function()
-        require("nvim-autopairs").setup {}
+        require("nvim-autopairs").setup{}
     end
   }
+
+  -- treesitter
+  use({
+    "nvim-treesitter/nvim-treesitter",
+    run = function()
+      require("nvim-treesitter.install").update({ with_sync = true })
+    end,
+  })
+
+  -- git signs plugin
+  use("lewis6991/gitsigns.nvim")
 
   if packer_bootstrap then
     require("packer").sync()
