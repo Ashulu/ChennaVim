@@ -74,16 +74,20 @@ return packer.startup(function(use)
   -- configuring lsp servers
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp")
-  use({"glepnir/lspsaga.nvim", branch = "main"})
+  use({
+    "glepnir/lspsaga.nvim", 
+    branch = "main",
+    require = {
+      {"nvim-tree/nvim-web-devicons"},
+      {"nvim-treesitter/nvim-treesitter"},
+    },
+  })
   use("onsails/lspkind.nvim")
 
   -- pretty diagnostics
-  -- use("folke/trouble.nvim")
+  use("folke/trouble.nvim")
 
-  -- formatting/linting
-  use("jose-elias-alvarez/null-ls.nvim")
-  use("jayp0521/mason-null-ls.nvim")
-
+  -- autopairing 
   use {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
@@ -96,7 +100,8 @@ return packer.startup(function(use)
   use({
     "nvim-treesitter/nvim-treesitter",
     run = function()
-      require("nvim-treesitter.install").update({ with_sync = true })
+      local ts_update = require("nvim-treesitter.install").update({ with_sync = true })
+      ts_update()
     end,
   })
 

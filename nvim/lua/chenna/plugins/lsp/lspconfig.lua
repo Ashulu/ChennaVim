@@ -76,8 +76,3 @@ lspconfig["pyright"].setup({
   capabilities = capabilities,
   on_attach = on_attach,
 })
-
-lspconfig["matlab_ls"].setup({
-  capabilities = capabilities,
-  on_attach = on_attach,
-})
