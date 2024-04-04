@@ -12,6 +12,16 @@ end
 
 local keymap = vim.keymap
 
+-- should hopefully allow for diagnostics to show while in insert mode
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,  -- here
+    underline = true,
+    severity_sort = false,
+    float = true,
+  })
+
 -- enable keybinds for available lsp servers
 local on_attach = function(bufnr)
   -- keybind options
