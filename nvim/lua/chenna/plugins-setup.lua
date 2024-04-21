@@ -75,7 +75,7 @@ return packer.startup(function(use)
   use("neovim/nvim-lspconfig") -- easily configure language servers
   use("hrsh7th/cmp-nvim-lsp")
   use({
-    "glepnir/lspsaga.nvim", 
+    "glepnir/lspsaga.nvim",
     branch = "main",
     require = {
       {"nvim-tree/nvim-web-devicons"},
@@ -107,6 +107,11 @@ return packer.startup(function(use)
 
   -- git signs plugin
   use("lewis6991/gitsigns.nvim")
+
+  -- a plugin for better terminal integration
+  use ({"akinsho/toggleterm.nvim", tag = '*', config = function()
+    require("toggleterm").setup()
+  end})
 
   if packer_bootstrap then
     require("packer").sync()
