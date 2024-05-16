@@ -1,9 +1,9 @@
-local toggle_setup, toggle = pcall(require, "toggleterm")
-if not toggle_setup then
-  return
-end
+--local toggle_setup, toggle = pcall(require, "toggleterm")
+--if not toggle_setup then
+--  return
+--end
 
-toggle.setup({
+require"toggleterm".setup({
   size = 13,
   open_mapping = [[<c-\>]],
   shade_filetypes = {},
