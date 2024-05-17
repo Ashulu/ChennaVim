@@ -51,7 +51,7 @@ lspconfig["clangd"].setup({
   on_attach = on_attach,
 })
 
-lspconfig["jdtls"].setup({
+lspconfig["java_language_server"].setup({
   capabilities = capabilities,
   on_attach = on_attach
 })
