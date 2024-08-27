@@ -227,6 +227,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
     url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
+  ["wilder.nvim"] = {
+    config = { "\27LJ\2\nä\4\0\0\17\0!\2;6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0004\4\3\0009\5\b\0009\a\t\0B\a\1\0029\b\n\0B\b\1\0A\5\1\0?\5\0\0B\1\3\0019\1\6\0'\3\v\0009\4\f\0005\6\17\0009\a\r\0005\t\15\0009\n\14\0B\n\1\2=\n\16\tB\a\2\2=\a\18\0069\a\19\0005\t\22\0004\n\3\0009\v\20\0B\v\1\2>\v\1\n9\v\21\0B\v\1\0?\v\1\0=\n\16\t5\n\23\0009\v\24\0'\r\25\0'\14\26\0004\15\4\0005\16\27\0>\16\1\0155\16\28\0>\16\2\0155\16\29\0>\16\3\15B\v\4\2=\v\30\n=\n\31\tB\a\2\2=\a \6B\4\2\0A\1\1\1K\0\1\0\6/\15highlights\vaccent\1\0\1\15foreground\f#f4468f\1\0\1\6a\3\1\1\0\1\6a\3\1\nPmenu\17WilderAccent\fmake_hl\1\0\1\vborder\vNormal\1\0\1\vborder\frounded\24lua_fzy_highlighter\26lua_pcre2_highlighter\22wildmenu_renderer\6:\1\0\0\16highlighter\1\0\0\22basic_highlighter\23popupmenu_renderer\17renderer_mux\rrenderer\20search_pipeline\21cmdline_pipeline\vbranch\rpipeline\15set_option\nmodes\1\0\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\3€€À™\4\5€€À™\4\0" },
+    loaded = true,
+    path = "/Users/ashis/.local/share/nvim/site/pack/packer/start/wilder.nvim",
+    url = "https://github.com/gelguy/wilder.nvim"
   }
 }
 
@@ -235,6 +241,10 @@ time([[Defining packer_plugins]], false)
 time([[Config for toggleterm.nvim]], true)
 try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
 time([[Config for toggleterm.nvim]], false)
+-- Config for: wilder.nvim
+time([[Config for wilder.nvim]], true)
+try_loadstring("\27LJ\2\nä\4\0\0\17\0!\2;6\0\0\0'\2\1\0B\0\2\0029\1\2\0005\3\4\0005\4\3\0=\4\5\3B\1\2\0019\1\6\0'\3\a\0004\4\3\0009\5\b\0009\a\t\0B\a\1\0029\b\n\0B\b\1\0A\5\1\0?\5\0\0B\1\3\0019\1\6\0'\3\v\0009\4\f\0005\6\17\0009\a\r\0005\t\15\0009\n\14\0B\n\1\2=\n\16\tB\a\2\2=\a\18\0069\a\19\0005\t\22\0004\n\3\0009\v\20\0B\v\1\2>\v\1\n9\v\21\0B\v\1\0?\v\1\0=\n\16\t5\n\23\0009\v\24\0'\r\25\0'\14\26\0004\15\4\0005\16\27\0>\16\1\0155\16\28\0>\16\2\0155\16\29\0>\16\3\15B\v\4\2=\v\30\n=\n\31\tB\a\2\2=\a \6B\4\2\0A\1\1\1K\0\1\0\6/\15highlights\vaccent\1\0\1\15foreground\f#f4468f\1\0\1\6a\3\1\1\0\1\6a\3\1\nPmenu\17WilderAccent\fmake_hl\1\0\1\vborder\vNormal\1\0\1\vborder\frounded\24lua_fzy_highlighter\26lua_pcre2_highlighter\22wildmenu_renderer\6:\1\0\0\16highlighter\1\0\0\22basic_highlighter\23popupmenu_renderer\17renderer_mux\rrenderer\20search_pipeline\21cmdline_pipeline\vbranch\rpipeline\15set_option\nmodes\1\0\0\1\4\0\0\6:\6/\6?\nsetup\vwilder\frequire\3€€À™\4\5€€À™\4\0", "config", "wilder.nvim")
+time([[Config for wilder.nvim]], false)
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Event lazy-loads

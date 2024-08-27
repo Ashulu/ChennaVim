@@ -113,6 +113,39 @@ return packer.startup(function(use)
     require("toggleterm").setup()
   end})
 
+  -- plugin for command suggestions
+  use {
+    'gelguy/wilder.nvim',
+    config = function()
+      local wilder = require('wilder')
+      wilder.setup({modes = {':', '/', '?'}})
+
+      wilder.set_option('pipeline', {
+        wilder.branch(
+          wilder.cmdline_pipeline(),
+          wilder.search_pipeline()
+        )
+      })
+
+      wilder.set_option('renderer', wilder.renderer_mux ({
+        [':'] = wilder.popupmenu_renderer({
+          highlighter = wilder.basic_highlighter(),
+        }),
+          ['/'] = wilder.wildmenu_renderer({
+            highlighter = {
+              wilder.lua_pcre2_highlighter(),
+              wilder.lua_fzy_highlighter(),
+            },
+            highlights = {
+              border = 'Normal',
+              accent = wilder.make_hl('WilderAccent', 'Pmenu', {{a = 1}, {a = 1}, {foreground = '#f4468f'}}),
+            },
+            border = 'rounded',
+          })
+      }))
+    end,
+  }
+
   if packer_bootstrap then
     require("packer").sync()
   end
